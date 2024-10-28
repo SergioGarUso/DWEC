@@ -16,7 +16,9 @@ body {
     overflow: hidden;
     text-align: center;
     /* Imagen de fondo */
-    background-image: url ('https://img.freepik.com/vector-premium/fondo-estilo-matriz-caida-numeros-aleatorios-verde-es-color-dominante_257312-85.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 img {
     padding: 10px;
