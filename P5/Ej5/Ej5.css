@@ -1,0 +1,59 @@
+/* CSS estilo Matrix */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #000000;
+    color: #00ff41;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#cont {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #00ff41;
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 40px #00ff41;
+    margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
+}
+
+button {
+    background-color: #000000;
+    border: 2px solid #00ff41;
+    color: #00ff41;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ff41;
+    color: #000000;
+    box-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+}
+
+button:active {
+    background-color: #00b330;
+    border-color: #00b330;
+    color: #000000;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+    }
+    to {
+        text-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41, 0 0 60px #00ff41, 0 0 80px #00ff41;
+    }
+}
