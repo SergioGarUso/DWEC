@@ -1,0 +1,22 @@
+Utilice instanceof cuando necesite confirmar el tipo de un objeto en tiempo de ejecución. Por ejemplo, cuando controle excepciones, 
+puede recurrir a diferentes códigos de manipulación de excepciones dependiendo del tipo de excepción tomada.
+
+Ej
+color1 = new String("verde");
+color1 instanceof String; // devuelve verdadero (true)
+color2 = "coral";
+color2 instanceof String; // devuelve falso (color2 no es un objeto String)
+
+
+Esto lo podemos usar en la Orientacion a objetos para saber si un objeto es del tipo que estamos buscando como en el siguiente ejemplo.
+El operador instanceof demuestra que el objeto miCoche es del tipo Coche y del tipo Object.
+
+Ej
+function Coche(fabricante, modelo, ejercicio) {
+  this.fabricante = fabricante;
+  this.modelo = modelo;
+  this.ejercicio = ejercicio;
+}
+miCoche = new Coche("Honda", "Accord", 1998);
+a = miCoche instanceof Coche; // devuelve verdadero (true)
+b = miCoche instanceof Object; // devuelve verdadero (true)
