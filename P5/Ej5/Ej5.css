@@ -18,8 +18,9 @@ body {
 
     background: #4e4e4e;
 }
-
-
+img {
+    padding: 10px;
+}
 
 h1 {
     font-size: 4rem;
@@ -35,13 +36,12 @@ h1 {
     animation: glow 1.5s infinite alternate;
 }
 
-/* Contenedor de los botones */
 .button-container {
     display: flex;
     gap: 20px;
 }
 
-/* Botón tipo píldora */
+
 .pill {
     padding: 10px 20px;
     border: none;
