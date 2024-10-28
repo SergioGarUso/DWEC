@@ -1,12 +1,25 @@
-const circulo = new Object();
-circulo.radio = 7;
-circulo.area = function() {
-    return Math.PI * Math.pow(this.radio, 2);
+function crearCirculo() {
+    const radio = parseFloat(document.getElementById('radio').value);
+    if (isNaN(radio) || radio <= 0) {
+        alert("Por favor, ingresa un número válido mayor a 0.");
+        return;
+    }
     
-};
-circulo.perimetro = function() {
-    return 2 * Math.PI * this.radio;
+    // Crear objeto círculo y asignar propiedades y métodos
+    const circulo = new Object();
+    circulo.radio = radio;
+    circulo.area = function() {
+        return Math.PI * Math.pow(this.radio, 2);
+    };
+    circulo.perimetro = function() {
+        return 2 * Math.PI * this.radio;
+    };
     
-};
-
-console.log(circulo.area()); 
+    // Mostrar resultados
+    const resultadosDiv = document.getElementById('resultados');
+    resultadosDiv.innerHTML = `
+        <p>Radio: ${circulo.radio}</p>
+        <p>Área: ${circulo.area().toFixed(2)}</p>
+        <p>Perímetro: ${circulo.perimetro().toFixed(2)}</p>
+    `;
+}
