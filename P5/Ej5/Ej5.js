@@ -14,7 +14,7 @@ class Contador {
 
 const contador = new Contador();
 
-function incrementar() {
+function incrementa() {
     contador.incrementar();
-    document.getElementById("contador").innerText = contador.mostrar();
+    document.getElementById("cont").innerText = contador.mostrar();
 }
