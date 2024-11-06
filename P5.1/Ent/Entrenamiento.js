@@ -43,12 +43,12 @@ class Concesionario {
     }
 
     //funcion para añadir vehiculos
-    agregarVehiculo(vehiculo) {
+    AddVehiculo(vehiculo) {
         this.inventario.push(vehiculo);
     }
 
     //funcion que muestra los vehiculos
-    mostrarInventario() {
+    showTaller() {
         if (this.inventario.length === 0) {
             console.log("Inventario vacio.");
         } else {
@@ -71,14 +71,14 @@ const carro3 = new coche("Seat", "Leon", 2019, 2000, 5);
 const motarda2 = new moto("Honda", "CBR", 2018, 1500, "recto");
 
 // Agregar vehículos 
-tallerChatarrasPalas.agregarVehiculo(carro1);
-tallerChatarrasPalas.agregarVehiculo(carro2);
-tallerChatarrasPalas.agregarVehiculo(carro3);
-tallerChatarrasPalas.agregarVehiculo(motarda1);
-tallerChatarrasPalas.agregarVehiculo(motarda2);
+tallerChatarrasPalas.AddVehiculo(carro1);
+tallerChatarrasPalas.AddVehiculo(carro2);
+tallerChatarrasPalas.AddVehiculo(carro3);
+tallerChatarrasPalas.AddVehiculo(motarda1);
+tallerChatarrasPalas.AddVehiculo(motarda2);
 
 // Mostrar inventario 
-tallerChatarrasPalas.mostrarInventario();
+tallerChatarrasPalas.showTaller();
 
 
 
