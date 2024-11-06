@@ -10,7 +10,6 @@ class cliente {
     toString() {
         return `ID: ${this.id}, Nombre: ${this.nombre}, Apellido: ${this.apellido}, Telefono: ${this.telefono}`;
     }
-
 }
 
 class factura {
