@@ -24,21 +24,21 @@
 
     <script>
         function calcularDiaNacimiento() {
-            // Obtener valores de día, mes y año del usuario
+            // valores de dia, mes y año del usuario
             let dia = parseInt(document.getElementById("dia").value);
             let mes = parseInt(document.getElementById("mes").value) - 1; // Meses en JavaScript van de 0 a 11
             let anio = parseInt(document.getElementById("anio").value);
 
-            // Crear una fecha con los valores proporcionados
+            // creara una fecha con los valores proporcionados
             let fechaNacimiento = new Date(anio, mes, dia);
 
-            // Array con nombres de los días de la semana
+            // array con nombres de los dias de la semana
             let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 
-            // Obtener el día de la semana (0 es Domingo, 6 es Sábado)
+            // obtengo el dia de la semana convietiendo
             let diaSemana = diasSemana[fechaNacimiento.getDay()];
 
-            // Mostrar el resultado al usuario
+            // mostrara el resultado al usuario
             document.getElementById("resultado").innerHTML = `Naciste un ${diaSemana}.`;
         }
     </script>
