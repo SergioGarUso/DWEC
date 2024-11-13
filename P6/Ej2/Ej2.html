@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato de Fecha y Hora</title>
+</head>
+<body>
+    <h2>Formatos de Fecha y Hora</h2>
+    <p><strong>dd/mm/yyyy: </strong> <span id="formato1"></span></p>
+    <p><strong>mm/dd/yy: </strong> <span id="formato2"></span></p>
+    <p><strong>Día: mm/dd/yyyy: </strong> <span id="formato3"></span></p>
+    <p><strong>Hora: </strong> <span id="hora"></span> <strong>Minutos: </strong> <span id="minutos"></span> <strong>Segundos: </strong> <span id="segundos"></span></p>
+    <button onclick="formatarfechas()">Mostrar Fechas</button>
+
+    <script>
+        function formatarfechas() {
+            let fecha = new Date();
+            let dia = fecha.getDate();
+            let mes = fecha.getMonth() + 1;
+            let anio = fecha.getFullYear();
+            let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            let diaSemana = diasSemana[fecha.getDay()];
+            let hora = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+
+            let formato1 = `${dia}/${mes}/${anio}`;
+            let formato2 = `${mes}/${dia}/${anio.slice(-2)}`;
+            let formato3 = `${diaSemana} ${mes}/${dia}/${anio}`;
+
+            document.getElementById('formato1').innerHTML = formato1;
+            document.getElementById('formato2').innerHTML = formato2;
+            document.getElementById('formato3').innerHTML = formato3;
+            document.getElementById('hora').innerHTML = hora;
+            document.getElementById('minutos').innerHTML = minutos;
+            document.getElementById('segundos').innerHTML = segundos;
+        }
+    </script>
+</body>
+</html>
