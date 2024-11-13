@@ -3,7 +3,7 @@ function crearCirculo() {
     const radio = parseFloat(document.getElementById('radio').value);
     
     
-    // Crear objeto círculo y asignar propiedades y métodos
+    //crear objeto círculo y asignar propiedades y métodos
     const circulo = new Object();
     circulo.radio = radio;
     circulo.area = function() {
