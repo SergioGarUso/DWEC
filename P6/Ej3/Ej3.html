@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <!-- P6/Ej3/Ej3.html  creado por Sergio GU y Ramón GB-->
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,40 @@
     <title>Ej3</title>
 </head>
 <body>
+    <h2>¿En qué día de la semana naciste?</h2>
+    <p>Ingresa tu fecha de nacimiento:</p>
+
+    <!-- Formulario para introducir la fecha de nacimiento -->
+    <label for="dia">Día:</label>
+    <input type="number" id="dia" min="1" max="31" required>
+    <label for="mes">Mes:</label>
+    <input type="number" id="mes" min="1" max="12" required>
+    <label for="anio">Año:</label>
+    <input type="number" id="anio" min="1900" required>
     
+    <button onclick="calcularDiaNacimiento()">Descubrir día de nacimiento</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDiaNacimiento() {
+            // Obtener valores de día, mes y año del usuario
+            let dia = parseInt(document.getElementById("dia").value);
+            let mes = parseInt(document.getElementById("mes").value) - 1; // Meses en JavaScript van de 0 a 11
+            let anio = parseInt(document.getElementById("anio").value);
+
+            // Crear una fecha con los valores proporcionados
+            let fechaNacimiento = new Date(anio, mes, dia);
+
+            // Array con nombres de los días de la semana
+            let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+            // Obtener el día de la semana (0 es Domingo, 6 es Sábado)
+            let diaSemana = diasSemana[fechaNacimiento.getDay()];
+
+            // Mostrar el resultado al usuario
+            document.getElementById("resultado").innerHTML = `Naciste un ${diaSemana}.`;
+        }
+    </script>
 </body>
 </html>
