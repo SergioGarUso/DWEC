@@ -37,8 +37,11 @@ function comprobarNumLoteria() {
         document.getElementById("cont").innerText = contador;
         
         // Si llegamos al máximo de intentos, mostramos mensaje de pérdida
-        if (contador > NUM_MAX_INTENTOS) {
+        if (contador > NUM_MAX_INTENTOS || contador == "Numero maximo de intentos alcanzado") {
             alert("Has perdido la lotería, no te quedan intentos el numero era " + numLoteria);
+            contador = "Numero maximo de intentos alcanzado";
+            document.getElementById("cont").innerText = contador;
+
         }
     }
 }
