@@ -1,0 +1,52 @@
+<h1>Ejemplo evento change</h1>
+
+<form>
+    <fieldset>
+        <legend>Información Personal</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br><br>
+
+        <!-- Menú desplegable para elegir un país -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="">Seleccione un país</option> 
+            <option value="es">España</option> 
+            <option value="mx">México</option> 
+            <option value="ar">Argentina</option> 
+        </select>
+    </fieldset>
+</form>
+
+<!-- Div para mostrar mensajes dinámicos -->
+<div id="mensaje"></div>
+
+<script>
+    const inputNombre = document.getElementById('nombre'); 
+    const selectPais = document.getElementById('pais'); 
+    const mensaje = document.getElementById('mensaje'); 
+
+    // Evento 'blur' para el campo de texto (cuando pierde el foco)
+    inputNombre.addEventListener('blur', () => {
+        // Validar si el campo está vacío
+        if (inputNombre.value.trim() === '') {
+            // Si está vacío, mostrar un mensaje de error
+            mensaje.textContent = 'El nombre no puede estar vacío.';
+        } else {
+            // Si no está vacío, mostrar el valor introducido
+            mensaje.textContent = `Nombre introducido: ${inputNombre.value}`;
+        }
+    });
+
+    // Evento 'change' para el menú desplegable (cuando se selecciona una opción)
+    selectPais.addEventListener('change', () => {
+        // Validar si no se selecciona un país (valor vacío)
+        if (selectPais.value === '') {
+            // Si no se ha seleccionado un país, mostrar un mensaje
+            mensaje.textContent = 'Por favor, selecciona un país.';
+        } else {
+            // Si se selecciona un país, mostrar el texto de la opción seleccionada
+            mensaje.textContent = `Has seleccionado: ${selectPais.options[selectPais.selectedIndex].text}`;
+        }
+    });
+</script>

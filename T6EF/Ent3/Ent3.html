@@ -1,0 +1,38 @@
+<h1>Ejemplo de eventos de foco</h1>
+
+    <!-- Div para mostrar mensajes dinámicos -->
+    <div id="mensaje"></div>    
+
+    <form>
+        <input type="text" id="usuario" placeholder="Nombre de usuario">
+        <input type="password" id="clave" placeholder="Contraseña">
+    </form>
+
+
+    <script>
+        const usuario = document.getElementById('usuario');
+        const clave = document.getElementById('clave');
+        const mensaje = document.getElementById('mensaje');
+
+        // Evento 'focus' en el campo de usuario
+        usuario.addEventListener('focus', () => {
+            /*  
+            Cuando el usuario hace clic o enfoca el campo "usuario",
+            mostramos un mensaje de ayuda en el div "mensaje". */
+            mensaje.textContent = 'Introduce tu nombre de usuario.';
+        });
+
+        // Evento 'blur' en el campo de contraseña
+        clave.addEventListener('blur', () => {
+            /*
+            Cuando el usuario deja de enfocar el campo "clave" (pierde el foco),
+            validamos si el campo está vacío. */
+            if (clave.value.trim() === '') {
+                // Si el campo está vacío, mostramos un mensaje de error.
+                mensaje.textContent = 'La contraseña no puede estar vacía.';
+            } else {
+                // Si el campo no está vacío, limpiamos el mensaje.
+                mensaje.textContent = '';
+            }
+        });
+    </script>

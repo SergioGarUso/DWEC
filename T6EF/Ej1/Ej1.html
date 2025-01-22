@@ -1,0 +1,51 @@
+<!-- Hecho por Sergio y Dylan-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Pon tu correo aqui abajo</h1>
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo" required>
+        <label for="correo_ver">Repite tu correo(no puedes hacer copypaste):</label>
+        <input type="text" id="correo_ver" name="correo_ver" required>
+        <p class="error" id="error_correo"></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        const correo = document.getElementById("correo");
+        const correo_ver = document.getElementById("correo_ver");
+        const error = document.getElementById("error_correo");
+        const boton = document.querySelector("button");
+        
+        const correo_regex = /^[a-zA-Z][^@]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/;
+
+        correo_ver.addEventListener("paste", (ev) => {
+            ev.preventDefault();  
+        });
+
+        function validateEmail() {
+            const emailValue = correo.value;
+            const emailVerValue = correo_ver.value;
+            
+            if (emailValue !== emailVerValue) {
+                error.textContent = "Los correos no coinciden";
+                boton.disabled = true;
+            } else if (!correo_regex.test(emailValue)) {
+                error.textContent = "El correo no es valido";
+                boton.disabled = true;
+            } else {
+                error.textContent = "";
+                boton.disabled = false;
+            }
+        }
+
+        correo.addEventListener("input", validateEmail);
+        correo_ver.addEventListener("input", validateEmail);
+    </script>
+</body>
+</html>
