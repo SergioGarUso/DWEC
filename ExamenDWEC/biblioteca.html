@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            color: white;
+            font-weight: bold;
+        }
+        h2{
+            color: lightgreen;
+            font-style: italic;
+        }
+        p{
+            text-align: justify;
+            text-indent: 1.5em;                  
+        }
+        #herramientas{
+            background-color: gray;
+            padding: 8px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+        }
+        #contenedorLibro {             
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;            
+            gap: 20px; 
+            width: 100%;
+        }       
+        #libro{            
+            width: 60%;
+            margin-left: 100px;
+            margin-bottom: 20px;
+            background-color: white;
+            border: 1px solid lightgray;
+            padding: 10px;            
+        }
+        #titulo{
+            color:red;
+            text-align: left;
+            font-style: italic;
+        }
+        #autor{
+            color:red;
+            font-weight: lighter;
+            margin-top: -10px;
+        }
+        #lateral{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 20px;            
+        }
+        #lateral img{            
+            width: 100%;            
+            height: auto;
+        }
+        #notas{            
+            padding: 10px;
+            margin-top: 20px;            
+            width: 100%;
+            background-color: #FFEBCD; 
+        }
+        #formulario{
+            margin-top: 20px;
+            color:white;
+        }
+        .frame{
+            width: 90%;
+            margin-top: 20px;            
+        }
+        .barra-vertical {            
+            width: 2px;            
+            background-color: black; 
+            margin-left: 10px;
+            margin-right: 10px;            
+        }        
+    </style>
+</head>
+<body>
+    <h1>Biblioteca online</h1>
+    <h2>La cripta de los Los JabbaScript</h2>
+    <hr>
+
+    <div id="herramientas">
+
+        <div id="panelZoom">
+            <button onclick="zoomIn()">Zoom++</button>
+            <button onclick="zoomOut()">Zoom--</button>
+        </div>
+        
+        <div class="barra-vertical"></div>
+        
+        <div id="panelEdicion">
+            <button id="modoGrinch" onclick="modeGrinch()">Mode Grinch</button>
+            <button id="botonNocturno" onclick="modoDiurnoNocturno()">Modo nocturno</button>
+        </div>
+
+        <div class="barra-vertical"></div>
+        <a href="ludoteca.html">
+            <button id="botonLudoteca">Ludoteca</button>
+        </a>
+    </div>
+
+    <div>
+        <h2 id="titulo">Cuento de Navidad </h2>
+        <h4 id="autor">(Charles Dickens, año 1843)</h4>
+    </div>
+
+    <div id="contenedorLibro">
+        <div class="frame" id="libro" >
+            <p>
+                La puerta del despacho de Scrooge permanecía abierta de modo que pudiera atisbar a su empleado que estaba 
+                copiando cartas en una deprimente y pequeña celda, una especie de cisterna. Scrooge tenía un fuego muy escaso, 
+                pero la lumbre del empleado era todavía mucho más pequeña: parecía un solo tizón. Pero no podía recargar la estufa
+                porque Scrooge guardaba el carbón en su propio cuarto, y seguro que si el empleado entraba con la pala su jefe
+                anticiparía que tenían que marcharse ya. Por consiguiente, el empleado se arropó con su bufanda blanca a intentó
+                calentarse con la vela; no era hombre de gran imaginación y fracasaron sus esfuerzos.
+            </p>        
+            <p>
+                «¡Feliz Navidad, tío; que Dios lo guarde!», exclamó una alegre voz. Era la voz del sobrino de Scrooge, 
+                que apareció ante él con tal rapidez que no tuvo tiempo a darse cuenta de que venía. 
+                «¡Bah! - dijo Scrooge - ¡Tonterías!»
+            </p>        
+            <p>
+                El sobrino de Scrooge estaba todo acalorado por la rápida caminata bajo la niebla y la helada; 
+                tenía un rostro agraciado y sonrosado; sus ojos chispeaban y su aliento volvió a condensarse cuando dijo:
+            </p>        
+            <p>
+                «¿Navidad una tontería, tío? Seguro que no lo dices en serio.»
+            </p>
+            <p>
+                «Sí que lo digo. ¡Feliz Navidad! ¿Qué derecho tienes a ser feliz? 
+                ¿Qué motivos tienes para estar feliz? Eres pobre de sobra.»
+            </p>
+            <p>
+                «Vamos, vamos» - respondió el sobrino cordialmente - «¿Qué derecho tienes a estar triste? 
+                ¿Qué motivos tienes para sentirte desgraciado? Eres rico de sobra.
+            </p>
+            <p>
+                Scrooge no supo repentizar una respuesta mejor y dijo otra vez: 
+                «¡Bah!» - y siguió con - «¡Tonterías!». 
+                «No te enfades, tío», dijo el sobrino.
+            </p>
+            <p>
+                «¿Cómo no me voy a enfadar» - respondió el tío -, «si vivo en un mundo de locos como
+                éste? ¡Felices Pascuas! ¡Y dale con Felices Pascuas! ¿Qué son las Pascuas sino el
+                mo-mento de pagar cuentas atrasadas sin tener dinero; el mo-mento de darte cuenta de que
+                eres un año más viejo y ni una hora más rico; el momento de hacer el balance y comprobar
+                que cada una de las anotaciones de los libros te resul-ta desfavorable a lo largo de los doce
+                meses del año? Si de mí dependiera - dijo Scrooge con indignación -, a todos esos idiotas
+                que van por ahí con el Felices Navidades en la boca habría que cocerlos en su propio
+                pudding y enterrarlos con una estaca de acebo clavada en el corazón. Eso es lo que
+                habría que hacer»
+            </p>
+            <p>
+                «¡Tío!», imploró el sobrino.
+                «¡Sobrino!», replicó el tío secamente, «celebra la Navidad a tu modo, que yo la celebraré al mío».
+                «¡Celebraré!», repitió el sobrino de Scrooge. «Pero si tú no celebras nada...»
+      Feliz Navidad          «Entonces déjame en paz», dijo Scrooge. «¡Que te apro-vechen! ¡Mucho te han aprovechado!»
+            </p>
+            <p>
+                «Puede que haya muchas cosas buenas de las que no he sacado provecho», replicó el
+                sobrino, «entre ellas la Navidad. Pero estoy seguro de que al llegar la Navidad - aparte de
+                la veneración debida a su sagrado nombre y a su origen, si es que eso se puede apartar - 
+                siempre he pensado que son unas fechas deliciosas, un tiempo de perdón, de afecto, de
+                caridad; el único momento que conozco en el largo calenda-rio del año, en que hombres y
+                mujeres parecen haberse puesto de acuerdo para abrir libremente sus cerrados corazones y
+                para considerar a la gente de abajo como compañeros de viaje ha-cia la tumba y no como
+                seres de otra especie embarcados con otro destino. Y por tanto, tío, aunque nunca ha puesto
+                en mis bolsillos un gramo de oro ni de plata, creo que sí me ha aprovechado y me seguirá
+                aprovechando; por eso digo: ¡bendita sea!»
+            </p>
+            <p>
+                El escribiente de la cisterna aplaudió involuntariamente; se dio cuenta en el acto de su
+                inconveniencia, se puso a hurgar en la lumbre y se apagó del todo el último rescoldo.
+            </p>
+            <p>
+                «Que oiga yo otro ruido de usted», dijo Scrooge, «y va a celebrar la Navidad con la pérdida
+                del empleo. Es usted un orador convincente, señor», agregó volviéndose hacia su sobrino.
+                «Me pregunto por qué no está en el Parlamento».
+                «No te enfades, tío. ¡Vamos! Cena con nosotros mañana».
+            </p>
+            <p>
+                Scrooge dijo que le acompañaría - sí, de veras que lo dijo. Pero completó la frase
+                diciendo que le acompañaría antes en la calamidad.
+            </p>
+            <p>
+                «Pero ¿por qué?», exclamó el sobrino de Scrooge. «¿Por qué?»
+            </p>
+            <p>
+                «¿Por qué te casaste?», dijo Scrooge.
+            </p>
+            <p>
+                «Porque me enamoré».
+            </p>
+            <p>
+                «¡Porque te enamoraste!», gruñó Scrooge, como si fuese la única cosa en el mundo más
+                ridícula que una feliz Navidad. «¡Buenas tardes!»
+            </p>
+            <p>
+                «No, tío, tú nunca venías a verme antes de hacerlo. ¿Por qué lo pones como excusa para no
+                venir ahora?»
+            </p>
+            <p>
+                «Buenas tardes», dijo Scrooge.
+            </p>
+            <p>
+                «No quiero nada de ti; no te estoy pidiendo nada; ¿por qué no podemos ser amigos?»
+            </p>
+            <p>
+                «Buenas tardes», dijo Scrooge.
+            </p>
+        </div>        
+    
+        <div id="lateral">
+            <img src="./dickens.jpg" alt="cuento_de_navidad"/>
+            <div class="frame" id="notas"></div> <!-- Añadir notas aquí -->
+
+            <form action="" id="formulario">
+                <label for="formNotas">Escribe una nota:<br></label>
+                <textarea id="formNotas" name="formNotas" rows="4" cols="50"></textarea><br>          
+                <button type="button" id="botonNotas" onclick="anotaciones()">Añadir Notas</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <!-- Coloca el script al final para asegurar que el DOM esté cargado -->
+    <script src="biblioteca.js"></script>
+    <script src="ludoteca.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="section">
+        <p id="p">
+            Este es un ejemplo de captura de un evento
+            asociado a un <span id="miSpan">elemento</span> HTML.
+        </p>
+    </section>
+    <script>
+        let veces = 0;
+        let miSection = document.getElementById("section");  
+        let miP = document.getElementById("p");      
+        let miSpan = document.getElementById("miSpan");  
+    
+        miSection.addEventListener("click", (evento) => {
+            console.log(`<section>: Capturado el evento ${veces} veces.`);
+        });
+
+        miP.addEventListener("click", (evento) => {
+            console.log(`<p>: Capturado el evento ${veces} veces.`);
+        });
+
+
+        miSpan.addEventListener("click", (evento) => {
+            veces++;
+            console.log(`<span>: Capturado el evento ${veces} veces.`);
+
+            if (veces > 12)
+                evento.stopPropagation();
+        });     
+    
+    </script>
+</body>
+</html>

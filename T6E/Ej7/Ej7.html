@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button id="boton1">Coloreo de rojo</button>
+        <button id="boton2">Yo hago lo mismo</button>
+    </p>
+
+    <script>
+        let boton1 = document.getElementById("boton1");
+        let boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", () =>{
+            document.body.style.backgroundColor = "red";
+        });
+
+
+        boton2.addEventListener("click", () =>{
+            let e1 = new Event("click");
+            boton1.dispatchEvent(e1);
+        });
+
+    </script>
+</body>
+</html>
+<!--El evento doz lanza el evento 1 asi que hace el evento uno cuando clicas el segundo boton-->

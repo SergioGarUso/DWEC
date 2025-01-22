@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej3</title>
+    <link rel="stylesheet" href="../Ej2/Ej2.css">
+    
+</head>
+<body>
+    <script src="Ej3.js"></script>
+    <h1>Lore ipsum</h1>
+    <p id="visitas"></p>
+    <div style="display: flex; gap: 10px; justify-content: flex-start; align-items: flex-start; ">
+        <div class="column" id="column1">
+        
+            <p>¡Bienvenid@!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt nunc ut sodales bibendum. Mauris a est non nisi pretium congue in at leo. Donec eleifend, purus quis egestas semper, enim eros sollicitudin arcu, vel egestas dui mauris nec sapien. Nunc ut iaculis ipsum, sit amet mattis lorem. Suspendisse sit amet diam id enim congue accumsan. Morbi molestie erat eu justo molestie feugiat sit amet nec ex. Ut semper dui sed tempor tincidunt. Fusce non auctor urna. Integer ultrices eros mollis aliquam blandit. Fusce fringilla, turpis id consectetur auctor, tortor nibh mattis diam, id laoreet elit nulla a enim. Nunc volutpat nisl sed dictum dapibus. Morbi at erat eget risus efficitur efficitur</p>
+            <p>Aliquam dapibus arcu vel mi convallis, at lacinia turpis commodo. Cras eget neque diam. Integer vulputate vitae magna a dictum. Duis tempor eu ligula sit amet dapibus. Phasellus placerat fringilla eleifend. Cras porttitor bibendum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec pharetra, nulla a ultrices convallis, metus lorem porta lorem, sit amet tempor ligula urna non erat. Mauris ornare eget metus eget tempor. Proin sit amet ex in eros rutrum cursus. Suspendisse potenti. Donec nec condimentum risus, interdum consectetur quam. Nam dolor sem, eleifend vitae tincidunt nec, auctor at urna.</p>
+            <p>Fusce vitae dapibus elit. Nulla nec ultricies eros. Ut porttitor magna eu ipsum posuere, at bibendum sem fringilla. Aenean tortor lorem, faucibus in elementum sit amet, molestie sed mi. Vivamus semper dolor nec accumsan blandit. Praesent mollis, dui in efficitur tempus, velit enim varius lorem, nec viverra urna tellus a felis. Integer consequat justo et odio vulputate cursus.</p>
+        </div>
+        <div class="column" id="column2">
+            <p>Aliquam finibus faucibus mauris id dictum. Suspendisse sit amet tellus a justo efficitur lacinia id quis quam. Praesent egestas massa sed fringilla imperdiet. Duis commodo, enim sit amet laoreet pulvinar, felis risus luctus felis, ut dignissim velit felis et tellus. Sed hendrerit lectus eget arcu rutrum, vel finibus purus molestie. Integer rutrum, lacus at porttitor tristique, odio odio lacinia urna, sed interdum ex lacus ut dolor. Donec eu purus vitae turpis varius fermentum at non leo.</p>
+            <p>In hac habitasse platea dictumst. Nam tincidunt laoreet ornare. Cras nec nibh quis felis posuere bibendum. Sed rhoncus erat tincidunt mi sollicitudin vestibulum. Curabitur sit amet euismod libero. Nunc risus sapien, malesuada auctor urna at, scelerisque molestie libero. Suspendisse facilisis, massa eu lobortis pellentesque, arcu quam lobortis velit, sit amet sagittis turpis neque at arcu. Cras semper quam eget dui varius, in semper lorem aliquet. Donec eleifend congue nisl, sit amet consectetur tortor tempus tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum lectus eget blandit maximus.</p>
+        </div>
+    </div>
+    <div class="formul">
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" style="width: 300px;" >
+            <br/>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" style="width: 400px;"  required>
+            <span id="errorEmail"></span>
+            <br/>
+            <label for="parrafo">Párrafo:</label>
+            <br/>
+            <textarea id="parrafo" name="parrafo" cols="40" rows="5" wrap="soft"  required></textarea>
+            <span id="errorParrafo"></span>
+            <br/>
+            <button type="button" onclick="leerParrafo()">Añadir párrafo</button>
+            <br/>
+            <label for="buscar">Buscar palabra:</label>
+            <input type="text" id="buscar" name="buscar" style="width: 300px;">
+            <button type="button" onclick="buscarPalabra()">Buscar</button>
+        </form>
+    </div>
+</body>
+</html>
+ 

@@ -1,0 +1,107 @@
+<!--hecho por Dylan Sergio-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        #fondo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+        .animate-out {
+            animation: animate-out 1s ease-out;
+        }
+
+        @keyframes animate-out {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <div id="fondo"> 
+        <img src="https://picsum.photos/600/400?random=0" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=1" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=2" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=3" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=4" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=5" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=6" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=7" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=8" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=9" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=10" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=11" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=12" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=13" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=14" alt="Random Image">
+        <img src="https://picsum.photos/600/400?random=15" alt="Random Image">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const fondo = document.getElementById("fondo");
+            const loading = document.getElementById("loading");
+
+            const totalImages = 15;
+            let loadedImages = 0;
+
+
+            const eliminarImagen = () => {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    loading.classList.add("animate-out");
+                    setTimeout(() => {
+                        loading.style.display = "none";
+                    }, 1000); 
+                }
+            };
+
+            const images = fondo.querySelectorAll("img");
+
+            images.forEach((image) => {
+                image.addEventListener("load", eliminarImagen);
+                
+            });
+        });
+    </script>
+</body>
+</html>

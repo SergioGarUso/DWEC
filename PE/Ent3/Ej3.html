@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej3</title>
+</head>
+<body>
+    <form>
+        <select name="tipoanimal" id="tipoanimal">
+            <option value="Perro">Perros</option>
+            <option value="Gato">Gatos</option>
+        </select>
+        <button type="button" onclick="mostrarAnimales()">Mostrar animales</button>
+    </form>
+    <script>
+        function mostrarAnimales() {
+            
+            let tipo = document.getElementById('tipoanimal').value;
+            const animales = [
+                new Perro("Max", "Canino", "Pastor Alemán", "https://i.postimg.cc/8zkSRCJW/max.png", 5),
+                new Perro("Rex", "Canino", "Golden Retriever", "https://i.postimg.cc/NjNwpwmn/rex.png", 3),
+                new Perro("Federico", "Canino", "Firulais", "https://i.postimg.cc/hP1nQmjc/federico.png", 7),
+                new Gato("Scar", "Felino", "Blanco", "https://i.postimg.cc/zfVYQPkG/scar.png", 2),
+                new Gato("Luna", "Felino", "Negro", "https://i.postimg.cc/gkWd0sGg/luna.png", 4)
+            ];
+
+            for (let i = 0; i < animales.length; i++) {
+                if (animales[i] instanceof tipo) {
+                    console.log(animales[i].toString());
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

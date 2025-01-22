@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+    
+    <script src="Ej2.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <h1 class="menu-title" style="width: fit-content; background-color: red;">MENU NAVIDEÑO</h1>
+        <form id="menuForm" name="menuForm">
+            <fieldset>
+                <legend>Entrantes</legend>
+                <p>Escoge el/los entrantes que desees.</p>
+                <label><input type="checkbox" name="entrante" value="ensalada"> Ensalada especial</label><br>
+                <label><input type="checkbox" name="entrante" value="jamon"> Jamón Ibérico</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Segundo plato</legend>
+                <p>Escoge un segundo plato.</p>
+                <label><input type="radio" name="segundo" value="pavo"> Pavo trufado</label><br>
+                <label><input type="radio" name="segundo" value="salmon"> Salmón al cava</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Postre</legend>
+                <p>Escoge el postre deseado.</p>
+                <select name="postre">
+                    <optgroup label="Con lactosa">
+                        <option value="tarta">Tarta de queso</option>
+                        <option value="coulant">Coulant de chocolate</option>
+                    </optgroup>
+                    <optgroup label="Sin lactosa">
+                        <option value="macedonia">Macedonia</option>
+                        <option value="sorbete">Sorbete de limón con cava</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+
+            <button type="button" id="submitMenu" onclick="menu()">Pedir el menú</button>
+            <button type="button" id="resetMenu" onclick="resetForm()">Deseleccionar todo</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>

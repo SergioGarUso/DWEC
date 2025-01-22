@@ -1,0 +1,29 @@
+#capa {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    border: 1px solid black;
+    overflow: auto; 
+}
+
+#boton {
+    position: fixed;
+    width: 200px;
+    height: 100px; 
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    text-align: center;
+    color: white; 
+    border-radius: 10px; 
+}
+
+#boton button {
+    height: 50px;
+    width: 80%;
+    margin-top: 25px;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cont =1;
+        let t1 =setInterval(() => {
+        if(confirm("Quieres seguir viendo el recordatorio?")){
+            console.log("Recordatorio numero " + cont);
+            cont++;
+        }else{
+            clearTimeout(t1);
+            console.log("Recordatorio cancelado en el intento " + cont);
+        }
+    }, 5000);
+    
+    </script>
+</body>
+</html>

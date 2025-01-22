@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contenerdor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #imagen{
+            display: none;
+            
+            max-width: 100%;
+            height: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>PULSA alt + F12 SALIR DE LA MATRIX</h1>
+    <div id="contenerdor"><img id="imagen" src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/57CA/production/_122247422_pills.jpg.webp" alt="Elige pildora"></div>
+    <script>
+        let imagen = document.getElementById("imagen");
+        let h1 = document.querySelector("h1");
+
+        addEventListener("keydown", (event) => {
+            if (event.altKey && event.key === "F12") {
+                imagen.style.display = "block";
+                h1.innerHTML="Tomas la píldora azul... la historia termina, te despiertas en tu cama y crees lo que quieras creer. Tomas la píldora roja... te quedas en el País de las Maravillas, y te enseño lo profunda que es la madriguera del conejo";
+            }
+        })
+    </script>
+</body>
+</html>

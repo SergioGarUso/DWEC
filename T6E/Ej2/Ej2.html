@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #cartel{
+            position: fixed;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="cartel">hola</div>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis lectus eu venenatis blandit. Cras lorem velit, commodo vel diam ac, luctus iaculis ipsum. Vestibulum tincidunt, diam ac vulputate sodales, sem lorem imperdiet odio, eu hendrerit dui turpis vel mauris. Etiam quam risus, volutpat consectetur facilisis ac, rhoncus in ligula. Donec et porta ipsum, a porttitor magna. Aliquam erat volutpat. Praesent sodales tristique tortor, id dapibus nibh vulputate sit amet. Ut consequat felis ac risus gravida ultricies. In id nunc lectus. Sed tincidunt felis id metus varius, ac viverra massa pharetra. Donec at lorem euismod, auctor nisi pulvinar, tristique urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+</p>
+<p>
+Aenean quis dictum magna. Fusce gravida semper est, vitae aliquam est dictum quis. Integer aliquet turpis et pharetra auctor. Proin id mattis sem, sed mattis tortor. Morbi eu ipsum nibh. Vestibulum venenatis eros vitae ante euismod, id dapibus mauris eleifend. Aliquam erat volutpat. Phasellus est quam, tincidunt eu convallis sed, ultricies eu sapien. Vestibulum tempor gravida sollicitudin.
+</p>
+<p>
+Vivamus venenatis, magna in fermentum pharetra, erat quam rutrum nisl, vel laoreet nulla metus ac nulla. Etiam imperdiet, nunc sit amet egestas suscipit, enim nulla interdum metus, vitae mollis leo augue id tellus. Sed congue, justo vel gravida hendrerit, nisi elit efficitur libero, id condimentum odio nunc eu arcu. Sed sed consectetur metus. In in interdum urna, quis tempor mi. Donec ultrices id dui tincidunt facilisis. Vivamus vulputate metus ac facilisis placerat. Donec vulputate, dolor at consequat fringilla, velit mauris varius elit, ut molestie nisl ante id mauris.
+</p>
+<p>
+Proin eget sodales libero. Cras lectus massa, venenatis id sagittis ac, condimentum eu libero. Donec a orci non lacus porttitor ultricies. Integer fringilla metus at mi blandit porttitor. Pellentesque placerat nec velit sit amet tincidunt. Nulla scelerisque ligula ipsum, eget faucibus ligula aliquet ac. Suspendisse aliquam convallis sapien sed laoreet. Sed quis ornare massa. Integer aliquam volutpat leo, at tempor felis rhoncus vel. In vitae mollis nisl. Phasellus risus velit, accumsan aliquet aliquet sed, tempus iaculis justo. Integer eleifend eget lorem eget laoreet. Cras enim odio, posuere non pulvinar at, rutrum a est. Nullam hendrerit, nisi eget scelerisque consectetur, purus elit dignissim tellus, a vehicula diam massa et mi.
+</p>
+<p>
+Vivamus ullamcorper aliquet fringilla. Ut placerat suscipit lacus ac fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed at tristique felis. Suspendisse potenti. Ut convallis nibh sit amet ante placerat, et tempor leo finibus. Nam porttitor eleifend semper. Nulla sodales velit nec volutpat aliquam. Proin nec malesuada augue, pellentesque ultrices quam. Phasellus iaculis magna non metus fringilla, non aliquam dolor congue. Nam quis tincidunt mi. Vestibulum condimentum felis lorem, ac rhoncus quam fermentum ultricies. Nam commodo dignissim odio quis dignissim.
+</p>
+<script>
+    let cartel = document.getElementById("cartel");
+
+    document.addEventListener("mousemove", (event) =>{
+        cartel.style.top = `${event.clientY}px`;
+        cartel.style.left = `${event.clientX}px`;
+        
+    })
+  
+</script>
+</body>
+</html>

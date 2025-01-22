@@ -1,0 +1,14 @@
+<p>Uno</p>
+<p>Dos</p>
+<p>Tres</p>
+
+<script>
+    function escribeContenido(evento){
+        console.log(evento.target.textContent);
+    }
+
+    let parrafos = document.querySelectorAll("p");
+    for(let parrafo of parrafos){
+        parrafo.addEventListener("click", escribeContenido);
+    }    
+</script>

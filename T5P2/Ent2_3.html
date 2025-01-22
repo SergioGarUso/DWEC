@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        asda <i>pedro</i> jajaj.<br>
+        asd <s>pedro2</s> jijoiji.
+    </section>
+    <script>
+        console.log(document.getElementsByTagName("section")[0].textContent);
+        console.log(document.getElementsByTagName("section")[0].innerHTML);
+
+        document.getElementsByTagName("section")[0].textContent = "mi <u>nuevo</u> contenido";
+        document.getElementsByTagName("section")[0].innerHTML = "mi <u>nuevo</u> contenido"; 
+    </script>
+</body>
+</html>

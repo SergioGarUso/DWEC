@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="primero">Elemento 1</li>
+        <li id="central">Elemento 2</li>
+        <li id="ultimo">Elemento 3</li>
+    </ul>
+
+    <!--<script>
+        let elemento = document.getElementById("central");
+        console.log("central" + elemento);
+        let elemeto_anterior = elemento.previousElementSibling;
+        console.log("primero" + elemeto_anterior);
+        let elemeto_siguiente = elemento.nextElementSibling;
+        console.log("ultimo" + elemeto_siguiente);
+    </script>-->
+
+    <script>
+        let elemeto_central = document.getElementsByTagName("li")[1];
+        console.log("central" + elemeto_central.innerHTML);
+        let elemeto_anterior = elemeto_central.previousElementSibling.innerHTML;
+        console.log("primero" + elemeto_anterior);
+        let elemeto_siguiente = elemeto_central.nextElementSibling.innerHTML;
+        console.log("ultimo" + elemeto_siguiente);
+    </script>
+
+</body>
+</html>
