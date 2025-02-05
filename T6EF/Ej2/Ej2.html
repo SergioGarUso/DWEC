@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+
+        #head {
+            background-color: orange;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            width: 100%;
+            height: 100%;
+        }
+
+        #imagen {
+            width: 90%;
+            height: 50%;
+        }
+
+        #descripcion {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <h1>Informe politico ESPAÑOL</h1>
+    </div>
+    <div id="contenedor">
+        <div id="izquierda">
+            <img src="https://www.lavanguardia.com/libros/images/authors/m/10/4b68645f-f52b-3cf2-8e4d-3f5c5807611f-image.jpg"
+                alt="Random Image" id="imagen">
+        </div>
+        <div id="derecha">
+            <div>
+                <label for="partido">Partido</label>
+                <select name="partido" id="partido">
+                    <option value="partido1" default>PP</option>
+                    <option value="partido2">PSOE</option>
+                    <option value="partido3">Ciudadanos</option>
+                </select>
+            </div>
+
+
+
+            <div>
+                <label for="delito">Delito</label>
+                <input type="text" id="delito">
+            </div>
+
+            <div>
+                <button type="button" id="but_descripcion">¿Que ha hecho?</button>
+            </div>
+
+
+            <div id="descripcion">
+                <label for="descripcion">Descripcion</label>
+                <br>
+                <textarea name="descripcion"></textarea>
+            </div>
+
+            <div>
+                <button type="button" id="enviar">Enviar</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const partido = document.getElementById("partido");
+        const delito = document.getElementById("delito");
+        const but_descripcion = document.getElementById("but_descripcion");
+        const descripcion = document.getElementById("descripcion");
+        const enviar = document.getElementById("enviar");
+        const imagen = document.getElementById("imagen");
+
+        but_descripcion.addEventListener("click", () => {
+            descripcion.style.display = "block";
+            but_descripcion.style.display = "none";
+        });
+
+        partido.addEventListener("change", () => {
+            if (partido.value == "partido1") {
+                imagen.src = "https://www.lavanguardia.com/libros/images/authors/m/10/4b68645f-f52b-3cf2-8e4d-3f5c5807611f-image.jpg";
+            } else if (partido.value == "partido2") {
+                imagen.src = "https://www.lamoncloa.gob.es/gobierno/PublishingImages/xv-legislatura/biografias/presidente_pedro_sanchez.png";
+            } else if (partido.value == "partido3") {
+                imagen.src = "https://img2.rtve.es/v/1571519/?w=1600";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
