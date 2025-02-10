@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-container {
+    display: grid;
+      
+    /* Creamos un diseño de cuadrícula que ajusta las imágenes a diferentes tamaños de pantalla. */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  
+  /* Efecto de carga: Usamos CSS para hacer que las imágenes aparezcan con una transición suave: */
+  .image-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .image-item img.loaded {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  #loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    display: none;      /* Ocultamos inicialmente el indicador de carga */
+  }
